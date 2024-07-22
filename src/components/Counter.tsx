@@ -6,7 +6,7 @@ export default function Counter() {
 
     return (
         <div>
-            <p style={{ fontSize: "36px", color: "blue" }}>{count}</p>
+            <p style={{ fontSize: "36px" }}>{count}</p>
             <button
                 className={classes.button}
                 onClick={() => setCount((prev) => prev + 1)}
