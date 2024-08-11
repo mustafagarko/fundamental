@@ -1,11 +1,10 @@
-import { FC, useState } from "react";
-import { classNames } from "shared/lib/classNames/classNames";
-import cls from "./Sidebar.module.sass";
-import { Button, ThemeButton } from "shared/ui/Button/Button";
-import { ThemeSwitch } from "widgets/ThemeSwitch/ui/ThemeSwitch";
-import { useTranslation } from "react-i18next";
-import { Suspense } from "react";
-import { LangSwitch } from "widgets/LangSwitch";
+import { FC, useState } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { ThemeSwitch } from 'widgets/ThemeSwitch';
+import { useTranslation } from 'react-i18next';
+import { LangSwitch } from 'widgets/LangSwitch';
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string;
@@ -29,7 +28,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
                 theme={ThemeButton.PRIMARY_INVERTED}
                 onClick={switchSidebar}
             >
-                {collapsed ? t("SidebarCollapsed") : t("SidebarNotCollapsed")}
+                {collapsed ? t('SidebarCollapsed') : t('SidebarNotCollapsed')}
             </Button>
 
             <div className={cls.switchers}>

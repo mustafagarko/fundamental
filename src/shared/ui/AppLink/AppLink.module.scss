@@ -1,0 +1,13 @@
+.AppLink {
+    color: var(--inverted-color);
+    text-decoration: none;
+    transition: 0.3s color;
+}
+
+.primary {
+    color: var(--primary-color);
+}
+
+.secondary {
+    color: var(--inverted-color);
+}

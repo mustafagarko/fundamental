@@ -1,6 +1,7 @@
 {
   "AboutTitle": "AboutTitle",
   "Language": "Language",
+  "LoadingSuspense": "LoadingSuspense",
   "MainTitle": "MainTitle",
   "NavbarAbout": "NavbarAbout",
   "NavbarMain": "NavbarMain",
