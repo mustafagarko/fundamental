@@ -3,7 +3,10 @@
     "NavbarMain": "Главная",
     "NavbarAbout": "О сайте",
     "SidebarCollapsed": "раскрыть",
-    "SidebarNotCollapsed": "скрыть"
-	
+    "SidebarNotCollapsed": "скрыть",
+	"PageNotFound": "Страница не найдена",
+    "UnexpectedError": "Произошла неожиданная ошибка",
+    "ReloadPage": "Перезагрузить страницу",
+    "CallError": "Вызвать ошибку"
 
 }

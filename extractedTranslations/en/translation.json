@@ -1,10 +1,14 @@
 {
   "AboutTitle": "",
+  "CallError": "CallError",
   "Language": "",
   "LoadingSuspense": "LoadingSuspense",
   "MainTitle": "",
   "NavbarAbout": "",
   "NavbarMain": "",
+  "PageNotFound": "PageNotFound",
+  "ReloadPage": "ReloadPage",
   "SidebarCollapsed": "",
-  "SidebarNotCollapsed": ""
+  "SidebarNotCollapsed": "",
+  "UnexpectedError": "UnexpectedError"
 }

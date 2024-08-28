@@ -1,0 +1,16 @@
+.PageError {
+    color: var(--primary-color);
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PageErrorContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
