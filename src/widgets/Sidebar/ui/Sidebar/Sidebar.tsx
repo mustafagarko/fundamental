@@ -20,11 +20,13 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 
     return (
         <div
+            data-testid="sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
                 className,
             ])}
         >
             <Button
+                data-testid="sidebarSwitchBtn"
                 theme={ThemeButton.PRIMARY_INVERTED}
                 onClick={switchSidebar}
             >

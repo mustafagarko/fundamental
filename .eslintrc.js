@@ -52,10 +52,21 @@ module.exports = {
         // чтобы не ругался на нижние подчеркивания в перемменных. будем их использовать для глобальных
         'no-underscore-dangle': 'off',
         'no-tabs': 0,
-        'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['to', 'fallback'] }],
-        'max-len': ['error', { ignoreComments: true }],
+        'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['to', 'fallback', 'data-testid'] }],
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
     },
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: [
+                '**/src/**/*.test.{ts,tsx}',
+            ],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+
+        },
+    ],
 };
