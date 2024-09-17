@@ -16,10 +16,10 @@ export const Navbar: FC<NavbarProps> = (props) => {
         <header className={classNames(cls.Navbar, {}, [className])}>
             <nav className={cls.NavBlock}>
                 <AppLink theme={AppLinkTheme.SECONDARY} to="/">
-                    {t('NavbarMain')}
+                    {t('Main Page')}
                 </AppLink>
                 <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
-                    {t('NavbarAbout')}
+                    {t('About Page')}
                 </AppLink>
             </nav>
         </header>

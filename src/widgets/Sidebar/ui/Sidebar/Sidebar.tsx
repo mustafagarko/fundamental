@@ -30,7 +30,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
                 theme={ThemeButton.PRIMARY_INVERTED}
                 onClick={switchSidebar}
             >
-                {collapsed ? t('SidebarCollapsed') : t('SidebarNotCollapsed')}
+                {collapsed ? t('Open menu') : t('Hide menu')}
             </Button>
 
             <div className={cls.switchers}>

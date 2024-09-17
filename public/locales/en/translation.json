@@ -1,11 +1,11 @@
 {
     "Language": "EN",
-    "NavbarMain": "Main",
-    "NavbarAbout": "About",
-    "SidebarCollapsed": "show",
-    "SidebarNotCollapsed": "hide",
-    "PageNotFound": "Page not found",
-    "UnexpectedError": "Unexpected Error occured",
-    "ReloadPage": "Reload Page",
-    "CallError": "Call error"
+    "Main Page": "Main Page",
+    "About Page": "About Page",
+    "Open menu": "show",
+    "Hide menu": "hide",
+    "Page not found": "Page not found",
+    "Unexpected error": "Unexpected Error occured",
+    "Reload page": "Reload Page",
+    "Call error": "Call error"
 }

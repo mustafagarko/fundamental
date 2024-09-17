@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme, Theme } from 'app/providers/ThemeProvider';
 import DarkBtn from 'shared/assets/icons/dark-theme.svg';
@@ -12,6 +12,7 @@ interface ThemeSwitchProps {
 
 export const ThemeSwitch: FC<ThemeSwitchProps> = ({ className, children }) => {
     const { theme, toggleTheme } = useTheme();
+
     return (
         <Button
             theme={ThemeButton.CLEAR}

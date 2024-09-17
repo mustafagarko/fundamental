@@ -1,11 +1,11 @@
 {
     "Language": "РУ",
-    "NavbarMain": "Главная",
-    "NavbarAbout": "О сайте",
-    "SidebarCollapsed": "раскрыть",
-    "SidebarNotCollapsed": "скрыть",
-	"PageNotFound": "Страница не найдена",
-    "UnexpectedError": "Произошла неожиданная ошибка",
-    "ReloadPage": "Перезагрузить страницу",
-    "CallError": "Вызвать ошибку"
+    "Main Page": "Главная",
+    "About Page": "О сайте",
+    "Open menu": "раскрыть",
+    "Hide menu": "скрыть",
+	"Page not found": "Страница не найдена",
+    "Unexpected error": "Произошла неожиданная ошибка",
+    "Reload page": "Перезагрузить страницу",
+    "Call error": "Вызвать ошибку"
 }

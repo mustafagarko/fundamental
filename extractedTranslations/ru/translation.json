@@ -1,14 +1,22 @@
 {
+  "About Page": "About Page",
   "AboutTitle": "AboutTitle",
+  "Call error": "Call error",
   "CallError": "CallError",
+  "Hide menu": "Hide menu",
   "Language": "Language",
   "LoadingSuspense": "LoadingSuspense",
+  "Main Page": "Main Page",
   "MainTitle": "MainTitle",
   "NavbarAbout": "NavbarAbout",
   "NavbarMain": "NavbarMain",
+  "Open menu": "Open menu",
+  "Page not found": "Page not found",
   "PageNotFound": "PageNotFound",
+  "Reload page": "Reload page",
   "ReloadPage": "ReloadPage",
   "SidebarCollapsed": "SidebarCollapsed",
   "SidebarNotCollapsed": "SidebarNotCollapsed",
+  "Unexpected error": "Unexpected error",
   "UnexpectedError": "UnexpectedError"
 }

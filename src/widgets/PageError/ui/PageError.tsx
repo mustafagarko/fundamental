@@ -18,13 +18,13 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
         <div className={classNames(cls.PageError, {}, [className])}>
             <div className={cls.PageErrorContent}>
                 <p>
-                    {t('UnexpectedError')}
+                    {t('Unexpected error')}
                 </p>
                 <Button
                     style={{ display: 'block', textDecoration: 'underline' }}
                     onClick={onClick}
                 >
-                    {t('ReloadPage')}
+                    {t('Reload page')}
                 </Button>
             </div>
         </div>
