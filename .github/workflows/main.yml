@@ -5,11 +5,11 @@ on:
   push: 
     branches: [ main ]
 jobs:
-  Pipeline:
-      runs-on: ubuntu-latest
-      strategy: 
-        matrix: 
-          node-version: [ 17.x ]
+  pipeline:
+    runs-on: ubuntu-latest
+    strategy: 
+      matrix: 
+        node-version: [ 17.x ]
     steps:
       - uses: actions/checkout@v2
       - name: Starting Node.js ${{ matrix.node-version }}
