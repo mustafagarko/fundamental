@@ -2,7 +2,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import 'app/styles/index.scss';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { ThemeContextDecorator } from 'shared/config/storybook/ThemeContextDecorator/ThemeContextDecorator';
+import { ThemeContextDecorator }
+    from 'shared/config/storybook/ThemeContextDecorator/ThemeContextDecorator';
 import { ThemeSwitch } from './ThemeSwitch';
 
 export default {
