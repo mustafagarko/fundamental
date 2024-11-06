@@ -1,11 +1,9 @@
 name: test, lint, build
 on:
   pull_request:
-    branches: 
-      - 'main'
+    branches: [ main ]
   push: 
-    branches: 
-      - 'main'
+    branches: [ main ]
 jobs:
   Pipeline:
       runs-on: ubuntu-latest
