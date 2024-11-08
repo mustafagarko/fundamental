@@ -21,10 +21,51 @@
     transform: translateX(-50%);
 }
 
+.link {
+    opacity: 1;
+    width: fit-content;
+    transition: opacity 0.3s, width 0.3s;
+}
+
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
     .switchers {
         flex-direction: column;
     }
+
+    .link {
+        opacity: 0;
+        width: 0;
+    }
+}
+
+.showHideBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    transform: translateX(100%);
+    border-left: none;
+
+    &:hover {
+        border-left: none;
+    }
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    color: var(--bg-color);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

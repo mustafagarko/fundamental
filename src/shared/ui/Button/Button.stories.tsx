@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import 'app/styles/index.scss';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Button, ThemeButton } from './Button';
+import { Button, SizeButton, ThemeButton } from './Button';
 
 export default {
     title: 'shared/Button',
@@ -40,3 +40,29 @@ ClearDark.args = {
     theme: ThemeButton.CLEAR,
 };
 ClearDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+    children: '<',
+    theme: ThemeButton.PRIMARY,
+    size: SizeButton.M,
+};
+export const SizeL = Template.bind({});
+SizeL.args = {
+    children: '<',
+    theme: ThemeButton.PRIMARY,
+    size: SizeButton.L,
+};
+export const SizeXL = Template.bind({});
+SizeXL.args = {
+    children: '<',
+    theme: ThemeButton.PRIMARY,
+    size: SizeButton.XL,
+};
+export const SizeXLSharp = Template.bind({});
+SizeXLSharp.args = {
+    children: '<',
+    theme: ThemeButton.PRIMARY,
+    size: SizeButton.XL,
+    sharpCorners: true,
+};
