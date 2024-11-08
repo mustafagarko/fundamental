@@ -6,7 +6,7 @@
     align-items: center;
     width: var(--sidebar-width);
     height: calc(100vh - var(--navbar-height));
-    padding: 20px;
+    padding: 40px;
     background: var(--inverted-bg-color);
     transition: width 0.3s;
 }
