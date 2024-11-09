@@ -7,6 +7,7 @@ import { LangSwitch } from 'widgets/LangSwitch';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import AboutUs from 'shared/assets/icons/aboutus.svg';
 import Home from 'shared/assets/icons/home.svg';
+import { RoutePaths } from 'shared/config/routeConfig/routeConfig';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -29,11 +30,11 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
             ])}
         >
             <div className={cls.items}>
-                <AppLink className={cls.item} theme={AppLinkTheme.SECONDARY} to="/">
+                <AppLink className={cls.item} theme={AppLinkTheme.SECONDARY} to={RoutePaths.main}>
                     <Home className={cls.icon} />
                     <span className={cls.link}>{t('Main Page')}</span>
                 </AppLink>
-                <AppLink className={cls.item} theme={AppLinkTheme.SECONDARY} to="/about">
+                <AppLink className={cls.item} theme={AppLinkTheme.SECONDARY} to={RoutePaths.about}>
                     <AboutUs className={cls.icon} />
                     <span className={cls.link}>
                         {t('About Page')}

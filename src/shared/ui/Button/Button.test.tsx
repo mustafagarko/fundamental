@@ -11,6 +11,5 @@ describe('Button', () => {
         // eslint-disable-next-line i18next/no-literal-string
         render(<Button theme={ThemeButton.PRIMARY}>Button</Button>);
         expect(screen.getByText('Button')).toHaveClass('primary');
-        screen.debug();
     });
 });
