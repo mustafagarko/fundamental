@@ -1,6 +1,6 @@
 @import "../variables/global";
 
-.app.light {
+:root {
     --bg-color: #{$light-grey};
     --inverted-bg-color: #{$dark};
     --primary-color: #{$dark};

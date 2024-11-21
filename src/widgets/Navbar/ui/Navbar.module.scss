@@ -1,6 +1,6 @@
 .Navbar {
     position: relative;
-    z-index: 9999;
+    z-index: var(--z-index-navbar);
     display: flex;
     align-items: center;
     height: var(--navbar-height);
