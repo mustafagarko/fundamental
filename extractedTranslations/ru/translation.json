@@ -3,7 +3,10 @@
   "AboutTitle": "AboutTitle",
   "Call error": "Call error",
   "CallError": "CallError",
+  "Count": "Count",
+  "Decrement": "Decrement",
   "Hide menu": "Hide menu",
+  "Increment": "Increment",
   "Language": "Language",
   "LoadingSuspense": "LoadingSuspense",
   "Main Page": "Main Page",
@@ -18,5 +21,7 @@
   "SidebarCollapsed": "SidebarCollapsed",
   "SidebarNotCollapsed": "SidebarNotCollapsed",
   "Unexpected error": "Unexpected error",
-  "UnexpectedError": "UnexpectedError"
+  "UnexpectedError": "UnexpectedError",
+  "decrement": "decrement",
+  "increment": "increment"
 }

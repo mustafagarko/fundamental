@@ -8,5 +8,8 @@
 	"Page not found": "Страница не найдена",
     "Unexpected error": "Произошла неожиданная ошибка",
     "Reload page": "Перезагрузить страницу",
-    "Call error": "Вызвать ошибку"
+    "Call error": "Вызвать ошибку",
+    "Count": "Счетчик",
+    "Increment": "Увеличить",
+    "Decrement": "Уменьшить"
 }

@@ -8,5 +8,8 @@
     "Page not found": "Page not found",
     "Unexpected error": "Unexpected Error occured",
     "Reload page": "Reload Page",
-    "Call error": "Call error"
+    "Call error": "Call error",
+    "Count": "Count",
+    "Increment": "Increment",
+    "Decrement": "Decrement"
 }
