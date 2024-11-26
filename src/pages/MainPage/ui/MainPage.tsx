@@ -10,7 +10,6 @@ export default function MainPage() {
             <p>
                 {t('MainTitle')}
             </p>
-            <Counter />
         </div>
     );
 }
