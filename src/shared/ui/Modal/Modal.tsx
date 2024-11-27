@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable i18next/no-literal-string */
 import {
     MouseEvent, ReactNode,
     useCallback,
@@ -24,7 +23,7 @@ export const Modal = (props: ModalProps) => {
     } = props;
 
     const { theme } = useTheme();
-    const mods = { [cls.opened]: isOpen, [cls[theme]]: true };
+    const mods = { [cls.opened]: isOpen };
     const contentClick = (e: MouseEvent<HTMLDivElement>) => {
         e.stopPropagation();
     };
@@ -52,7 +51,7 @@ export const Modal = (props: ModalProps) => {
 
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [className])}>
+            <div className={classNames(cls.Modal, mods, [className, theme])}>
                 <div onClick={closeModal} className={cls.overlay}>
                     <div onClick={(e) => contentClick(e)} className={cls.content}>
                         {children}

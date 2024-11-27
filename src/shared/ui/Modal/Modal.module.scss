@@ -39,12 +39,3 @@
         transform: scale(1);
     }
 }
-
-.Modal.dark {
-    --bg-color: #{$dark};
-    --primary-color: #{$white};
-}
-
-.Modal.light {
-    --bg-color: #{$white};
-}
