@@ -11,5 +11,8 @@
     "Call error": "Call error",
     "Count": "Count",
     "Increment": "Increment",
-    "Decrement": "Decrement"
+    "Decrement": "Decrement",
+    "LogIn": "Log in",
+    "EnterUsername": "Enter username",
+    "EnterPassword": "Enter password"
 }

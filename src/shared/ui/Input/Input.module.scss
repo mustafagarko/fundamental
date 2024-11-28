@@ -1,0 +1,41 @@
+.Input {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 100%;
+    padding-top: 12px;
+    font: var(--font-m);
+    font-weight: 700;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.InputWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.label {
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    opacity: 1;
+    bottom: 2px;
+    transition: transform 0.3s, opacity 0.3s, font-size 0.3s;
+    font-size: var(--font-size-m);
+    line-height: var(--font-line-m);
+    color: var(--inverted-bg-color);
+}
+
+.active {
+    + .label {
+        transform: translateY(calc(-100%));
+        opacity: 0.5;
+        font-size: var(--font-size-s);
+        line-height: var(--font-line-s);
+    }
+}

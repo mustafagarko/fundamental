@@ -4,6 +4,7 @@ import {
     MouseEvent, ReactNode,
     useCallback,
     useEffect,
+    useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
@@ -13,15 +14,17 @@ import { Portal } from '../Portal/Portal';
 interface ModalProps {
     className?: string;
     isOpen: boolean;
-    setClosed: () => void;
-    children: ReactNode
+    closeModal: () => void;
+    children: ReactNode,
+    lazy?: boolean,
 }
 
 export const Modal = (props: ModalProps) => {
     const {
-        className, isOpen, setClosed, children,
+        className, isOpen, closeModal, children, lazy,
     } = props;
 
+    const [isMounted, setIsMounted] = useState(false);
     const { theme } = useTheme();
     const mods = { [cls.opened]: isOpen };
     const contentClick = (e: MouseEvent<HTMLDivElement>) => {
@@ -30,9 +33,9 @@ export const Modal = (props: ModalProps) => {
 
     const handleEsc = useCallback((e: KeyboardEvent) => {
         if (e.key === 'Escape') {
-            setClosed();
+            closeModal();
         }
-    }, [setClosed]);
+    }, [closeModal]);
 
     useEffect(() => {
         if (isOpen) {
@@ -42,12 +45,13 @@ export const Modal = (props: ModalProps) => {
             window.removeEventListener('keydown', handleEsc);
         };
     }, [isOpen, handleEsc]);
-
-    const closeModal = () => {
-        if (setClosed) {
-            setClosed();
+    useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
         }
-    };
+    }, [isOpen]);
+
+    if (lazy && !isMounted) return null;
 
     return (
         <Portal>

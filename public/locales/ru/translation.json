@@ -11,5 +11,8 @@
     "Call error": "Вызвать ошибку",
     "Count": "Счетчик",
     "Increment": "Увеличить",
-    "Decrement": "Уменьшить"
+    "Decrement": "Уменьшить",
+     "LogIn": "Войти",
+     "EnterUsername": "Введите имя пользователя",
+    "EnterPassword": "Введите пароль"
 }
