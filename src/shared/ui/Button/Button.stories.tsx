@@ -1,4 +1,3 @@
-import React, { Children } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import 'app/styles/index.scss';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
@@ -21,12 +20,12 @@ Primary.args = {
     theme: ThemeButton.PRIMARY,
 };
 
-export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {
+export const PrimaryInverted = Template.bind({});
+PrimaryInverted.args = {
     children: 'Text',
     theme: ThemeButton.PRIMARY,
 };
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+PrimaryInverted.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Clear = Template.bind({});
 Clear.args = {
@@ -34,12 +33,12 @@ Clear.args = {
     theme: ThemeButton.CLEAR,
 };
 
-export const ClearDark = Template.bind({});
-ClearDark.args = {
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
     children: 'Text',
-    theme: ThemeButton.CLEAR,
+    theme: ThemeButton.CLEAR_INVERTED,
 };
-ClearDark.decorators = [ThemeDecorator(Theme.DARK)];
+ClearInverted.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const SizeM = Template.bind({});
 SizeM.args = {
@@ -65,4 +64,12 @@ SizeXLSharp.args = {
     theme: ThemeButton.PRIMARY,
     size: SizeButton.XL,
     sharpCorners: true,
+
+};
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: 'Button',
+    theme: ThemeButton.PRIMARY,
+    size: SizeButton.M,
+    disabled: true,
 };

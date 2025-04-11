@@ -1,6 +1,6 @@
 import { WebpackConfiguration } from 'webpack-dev-server';
 import path from 'path';
-import { RuleSetRule } from 'webpack';
+import { DefinePlugin, RuleSetRule } from 'webpack';
 import { BuildPaths } from '../build/types/config';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 
@@ -26,5 +26,8 @@ export default ({ config }:{config: WebpackConfiguration}) => {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
     });
+    config.plugins?.push(new DefinePlugin({
+        __IS_DEV__: true,
+    }));
     return config;
 };

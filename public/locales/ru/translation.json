@@ -12,7 +12,10 @@
     "Count": "Счетчик",
     "Increment": "Увеличить",
     "Decrement": "Уменьшить",
-     "LogIn": "Войти",
-     "EnterUsername": "Введите имя пользователя",
-    "EnterPassword": "Введите пароль"
+    "LogIn": "Войти",
+    "LogOut": "Выйти",
+    "EnterUsername": "Введите имя пользователя",
+    "EnterPassword": "Введите пароль",
+    "AuthForm": "Форма авторизации",
+    "AuthError": "Ошибка авторизации"
 }

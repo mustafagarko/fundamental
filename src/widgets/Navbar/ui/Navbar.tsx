@@ -1,10 +1,12 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 
 import { useTranslation } from 'react-i18next';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import { LoginModal } from 'features/AuthByUsername/ui/LoginModal/LoginModal';
+import { LoginModal } from 'features/AuthByUsername';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserData, userActions } from 'entities/User';
+import { USER_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -15,13 +17,30 @@ export const Navbar: FC<NavbarProps> = (props) => {
     const { t } = useTranslation();
     const { className } = props;
     const [isAuthModal, setIsAuthModal] = useState(false);
-
+    const user = useSelector(getUserData);
+    const dispatch = useDispatch();
     const openModal = () => {
         setIsAuthModal(true);
     };
     const closeModal = () => {
         setIsAuthModal(false);
     };
+    const onLogout = () => {
+        dispatch(userActions.logout());
+        localStorage.removeItem(USER_LOCALSTORAGE_KEY);
+    };
+
+    if (user) {
+        return (
+            <header className={classNames(cls.Navbar, {}, [className])}>
+                <nav className={cls.NavBlock}>
+                    <Button onClick={onLogout} theme={ThemeButton.PRIMARY_INVERTED}>
+                        {t('LogOut')}
+                    </Button>
+                </nav>
+            </header>
+        );
+    }
 
     return (
         <header className={classNames(cls.Navbar, {}, [className])}>

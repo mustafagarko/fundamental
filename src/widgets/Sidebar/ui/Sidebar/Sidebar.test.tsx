@@ -1,10 +1,7 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import { withTranslation } from 'react-i18next';
-import { renderWithTranslation }
-    from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
-import { MemoryRouter } from 'react-router-dom';
 import { renderComponent } from 'shared/lib/tests/renderComponent/renderComponent';
-import { routeConfig, RoutePaths } from 'shared/config/routeConfig/routeConfig';
+import { RoutePaths } from 'shared/config/routeConfig/routeConfig';
 import { Sidebar } from './Sidebar';
 
 describe('Sidebar', () => {

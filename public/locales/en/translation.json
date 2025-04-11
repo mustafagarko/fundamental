@@ -13,6 +13,9 @@
     "Increment": "Increment",
     "Decrement": "Decrement",
     "LogIn": "Log in",
+    "LogOut": "Log out",
     "EnterUsername": "Enter username",
-    "EnterPassword": "Enter password"
+    "EnterPassword": "Enter password",
+    "AuthForm": "Authorization form",
+    "AuthError": "Authorization error"
 }

@@ -1,6 +1,8 @@
 {
   "About Page": "About Page",
   "AboutTitle": "AboutTitle",
+  "AuthError": "AuthError",
+  "AuthForm": "AuthForm",
   "Call error": "Call error",
   "CallError": "CallError",
   "Count": "Count",
@@ -12,6 +14,7 @@
   "Language": "Language",
   "LoadingSuspense": "LoadingSuspense",
   "LogIn": "LogIn",
+  "LogOut": "LogOut",
   "Main Page": "Main Page",
   "MainTitle": "MainTitle",
   "NavbarAbout": "NavbarAbout",
