@@ -1,5 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import React, { InputHTMLAttributes, useRef, useState } from 'react';
+import React, {
+    InputHTMLAttributes, useEffect, useRef, useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 import cls from './Input.module.scss';
 
@@ -21,7 +23,10 @@ export const Input = (props: InputProps) => {
     const { t } = useTranslation();
     const ref = useRef<HTMLInputElement>(null);
     const [active, setActive] = useState(false);
-
+    useEffect(() => {
+        if (value) setActive(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
     const onFocus = () => {
         setActive(true);
     };

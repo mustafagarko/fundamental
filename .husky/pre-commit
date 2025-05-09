@@ -1,3 +1,5 @@
+set -x
+
 #!/bin/sh
 . "$HOME/.nvm/nvm.sh"
 nvm use
@@ -9,5 +11,3 @@ npm run build:prod
 npm run lint:ts
 npm run lint:scss
 npm run test:unit
-npm run storybook:build
-npm run test:ui

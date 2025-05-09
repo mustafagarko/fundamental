@@ -39,6 +39,7 @@ WithError.args = {
 WithError.decorators = [StoreDecorator({
     loginForm: {
         error: 'undexpected error',
+        username: '123',
     },
 })];
 export const isLoading = Template.bind({});

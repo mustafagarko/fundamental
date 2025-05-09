@@ -43,17 +43,13 @@ const LoginForm = (props: LoginFormProps) => {
         dispatch(loginByUsername({ username, password }));
     }, [dispatch, password, username]);
 
-    useEffect(() => {
-        dispatch(loginActions.setUsername(''));
-        dispatch(loginActions.setPassword(''));
-    }, [dispatch]);
-
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <Text title={t('AuthForm')} />
                 {error && <Text theme={TextTheme.ERROR} text={t('AuthError')} />}
                 <Input
+                    autoFocus
                     value={username}
                     onChange={onUsernameChange}
                     type="text"
@@ -61,6 +57,7 @@ const LoginForm = (props: LoginFormProps) => {
                     placeholder={t('EnterUsername')}
                 />
                 <Input
+                    autoFocus
                     value={password}
                     onChange={onPasswordChange}
                     type="password"

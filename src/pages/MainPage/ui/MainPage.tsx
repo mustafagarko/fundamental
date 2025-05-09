@@ -8,9 +8,6 @@ export default function MainPage() {
             <p>
                 {t('MainTitle')}
             </p>
-            <p>
-                {t('MainTitle')}
-            </p>
         </div>
     );
 }
