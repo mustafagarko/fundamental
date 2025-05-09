@@ -1,4 +1,8 @@
 #!/bin/sh
+. "$HOME/.nvm/nvm.sh"
+nvm use
+
+#!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
 npm run lint:ts
