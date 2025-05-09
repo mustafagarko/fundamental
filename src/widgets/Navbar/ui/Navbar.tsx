@@ -45,7 +45,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
     return (
         <header className={classNames(cls.Navbar, {}, [className])}>
             <nav className={cls.NavBlock}>
-                <LoginModal isOpen={isAuthModal} closeModal={closeModal} />
+                {isAuthModal && <LoginModal isOpen={isAuthModal} closeModal={closeModal} />}
                 <Button onClick={openModal} theme={ThemeButton.PRIMARY_INVERTED}>
                     {t('LogIn')}
                 </Button>
