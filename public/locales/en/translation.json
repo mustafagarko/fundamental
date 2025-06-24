@@ -17,5 +17,7 @@
     "EnterUsername": "Enter username",
     "EnterPassword": "Enter password",
     "AuthForm": "Authorization form",
-    "AuthError": "Authorization error"
+    "AuthError": "Authorization error",
+    "Profile Page": "Profile Page"
+
 }

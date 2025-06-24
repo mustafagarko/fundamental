@@ -17,5 +17,6 @@
     "EnterUsername": "Введите имя пользователя",
     "EnterPassword": "Введите пароль",
     "AuthForm": "Форма авторизации",
-    "AuthError": "Ошибка авторизации"
+    "AuthError": "Ошибка авторизации",
+    "Profile Page": "Профиль"
 }

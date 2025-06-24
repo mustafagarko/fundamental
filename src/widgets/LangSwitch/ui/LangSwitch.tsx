@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
@@ -7,7 +7,7 @@ interface LangSwitchProps {
     collapsed: boolean
 }
 
-export const LangSwitch: FC<LangSwitchProps> = ({ className, collapsed }) => {
+export const LangSwitch: FC<LangSwitchProps> = memo(({ className, collapsed }: LangSwitchProps) => {
     const { t, i18n } = useTranslation();
     function switchLang() {
         i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en');
@@ -17,4 +17,4 @@ export const LangSwitch: FC<LangSwitchProps> = ({ className, collapsed }) => {
             {t(collapsed ? 'LangShort' : 'Language')}
         </Button>
     );
-};
+});

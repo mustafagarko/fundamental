@@ -21,12 +21,6 @@
     transform: translateX(-50%);
 }
 
-.link {
-    opacity: 1;
-    width: fit-content;
-    transition: opacity 0.3s, width 0.3s;
-}
-
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
@@ -55,17 +49,5 @@
 .items {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
-    color: var(--bg-color);
-}
-
-.item {
-    display: flex;
-    align-items: center;
     gap: 10px;
 }
