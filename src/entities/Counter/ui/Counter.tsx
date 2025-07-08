@@ -1,12 +1,8 @@
-import { FC } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import { StateSchema } from 'app/providers/StoreProvider';
 import { useTranslation } from 'react-i18next';
-import { counterActions } from '../model/slice/CounterSlice';
-import { getCounter } from '../model/selectors/getCounter/getCounter';
+import { useDispatch, useSelector } from 'react-redux';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
+import { counterActions } from '../model/slice/CounterSlice';
 
 export const Counter = () => {
     const { t } = useTranslation();

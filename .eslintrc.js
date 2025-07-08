@@ -1,11 +1,15 @@
-/* eslint-disable max-len */
+// /* eslint-disable max-len */
 module.exports = {
     env: {
         browser: true,
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
+    extends: [
+        'plugin:react/recommended',
+        'airbnb',
+        'plugin:i18next/recommended',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -22,7 +26,10 @@ module.exports = {
         // отступы для остальных файлов
         indent: [2, 4],
         // использование jsx в файлах с расширением
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
         // чтобы не ругался на абсолютные пути
         'import/no-unresolved': 'off',
         // чтобы не ругался на именованные экспорты
@@ -52,25 +59,29 @@ module.exports = {
         // чтобы не ругался на нижние подчеркивания в перемменных. будем их использовать для глобальных
         'no-underscore-dangle': 'off',
         'no-tabs': 0,
-        'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['to', 'fallback', 'data-testid'] }],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['to', 'fallback', 'data-testid'],
+            },
+        ],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
+        'no-undef': 'off',
     },
     globals: {
         __IS_DEV__: true,
-        __API__: '',
+        __API__: true,
     },
     overrides: [
         {
-            files: [
-                '**/src/**/*.test.{ts,tsx}',
-            ],
+            files: ['**/src/**/*.test.{ts,tsx}'],
             rules: {
                 'i18next/no-literal-string': 'off',
             },
-
         },
     ],
 };

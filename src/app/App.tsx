@@ -1,5 +1,4 @@
-import { Suspense, useEffect, useState } from 'react';
-
+import { Suspense, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/router';
@@ -15,7 +14,7 @@ function App() {
     useEffect(() => {
         if (localStorage.getItem(USER_LOCALSTORAGE_KEY)) {
             const userData = localStorage.getItem(USER_LOCALSTORAGE_KEY);
-            dispatch(userActions.setUserData(JSON.parse(userData)));
+            if (userData) dispatch(userActions.setUserData(JSON.parse(userData)));
         }
     }, [dispatch]);
     return (

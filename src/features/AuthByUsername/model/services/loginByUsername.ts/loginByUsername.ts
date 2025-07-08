@@ -16,7 +16,7 @@ export const loginByUsername = createAsyncThunk<User, LoginByusernameProps, Thun
             if (!response.data) throw new Error();
             dispatch(userActions.setUserData(response.data));
             localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
-            extra.navigate('/profile');
+            extra.navigate?.('/profile');
             return response.data;
         } catch (e) {
             return rejectWithValue('error');

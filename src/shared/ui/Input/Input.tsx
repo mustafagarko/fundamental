@@ -2,7 +2,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import React, {
     InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
-import { useTranslation } from 'react-i18next';
 import cls from './Input.module.scss';
 
 type InputHTMLProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
@@ -20,7 +19,6 @@ export const Input = memo((props: InputProps) => {
     const {
         className, placeholder, id, value, onChange, type = 'text', ...otherProps
     } = props;
-    const { t } = useTranslation();
     const ref = useRef<HTMLInputElement>(null);
     const [active, setActive] = useState(false);
     useEffect(() => {
@@ -31,7 +29,7 @@ export const Input = memo((props: InputProps) => {
         setActive(true);
     };
     const onBlur = () => {
-        if (!value && !ref.current.value) {
+        if (!value && !ref?.current?.value) {
             setActive(false);
         }
     };
