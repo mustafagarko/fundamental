@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import React, {
-    InputHTMLAttributes, useEffect, useRef, useState,
+    InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 import cls from './Input.module.scss';
@@ -16,7 +16,7 @@ interface InputProps extends InputHTMLProps {
     onChange?: (value: string) => void;
 }
 
-export const Input = (props: InputProps) => {
+export const Input = memo((props: InputProps) => {
     const {
         className, placeholder, id, value, onChange, type = 'text', ...otherProps
     } = props;
@@ -59,4 +59,4 @@ export const Input = (props: InputProps) => {
             {placeholder && <label className={cls.label} htmlFor={id}>{placeholder}</label>}
         </div>
     );
-};
+});
