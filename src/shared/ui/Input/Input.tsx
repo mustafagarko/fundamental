@@ -4,20 +4,21 @@ import React, {
 } from 'react';
 import cls from './Input.module.scss';
 
-type InputHTMLProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type InputHTMLProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readonly'>
 
 interface InputProps extends InputHTMLProps {
     className?: string;
     placeholder?: string;
     id?: string;
-    value?: string;
+    value?: string | number;
     type?: string;
+    readonly?: boolean,
     onChange?: (value: string) => void;
 }
 
 export const Input = memo((props: InputProps) => {
     const {
-        className, placeholder, id, value, onChange, type = 'text', ...otherProps
+        className, placeholder, id, value, onChange, readonly, type = 'text', ...otherProps
     } = props;
     const ref = useRef<HTMLInputElement>(null);
     const [active, setActive] = useState(false);
@@ -36,10 +37,14 @@ export const Input = memo((props: InputProps) => {
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
     };
-
+    const mods = {
+        [cls.active]: active,
+        [cls.readonly]: readonly,
+    };
     return (
         <div className={classNames(cls.InputWrapper, {}, [])}>
             <input
+                readOnly={readonly}
                 data-testid="Input"
                 type={type}
                 value={value}
@@ -49,7 +54,7 @@ export const Input = memo((props: InputProps) => {
                 id={id}
                 className={classNames(
                     cls.Input,
-                    { [cls.active]: active },
+                    mods,
                     [],
                 )}
                 ref={ref}

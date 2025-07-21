@@ -1,4 +1,18 @@
 {
-    "Profile": "Profile",
-    "ProfileTitle": "Profile Page"
+  "Profile": "Profile",
+  "ProfileTitle": "Profile Page",
+  "Edit": "Edit Profile",
+  "YourFirstName": "Your first name",
+  "YourLastName": "Your last name",
+  "ProfileError": "Unexpected error while fetching Profile data",
+  "TryToReload": "Try to refresh the page",
+  "Save": "Save",
+  "Cancel": "Cancel",
+  "Age": "Age",
+  "City": "City",
+  "Username": "Username",
+  "Avatar": "Avatar",
+  "YourCurrency": "Your currency",
+  "YourCountry": "Your country"
+  
 }

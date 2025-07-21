@@ -1,3 +1,30 @@
+.ProfileCard {
+    border: 1px solid var(--primary-color);
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 300px;
+    transition: border 0.3s;
+}
+
 .text {
     color: var(--primary-color);
+}
+
+.isLoading {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatarWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.isEditing {
+    border: 1px solid var(--color-red-light);
 }

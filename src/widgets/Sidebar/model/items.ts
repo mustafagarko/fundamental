@@ -7,7 +7,8 @@ import User from 'shared/assets/icons/user.svg';
 export interface SidebarItemType {
     path: string,
     text: string,
-    Icon: FunctionComponent<SVGAttributes<SVGElement>>
+    Icon: FunctionComponent<SVGAttributes<SVGElement>>,
+    requireAuth?: boolean
 }
 
 export const SidebarItems: SidebarItemType[] = [
@@ -25,5 +26,6 @@ export const SidebarItems: SidebarItemType[] = [
         path: RoutePaths.profile,
         text: 'Profile Page',
         Icon: User,
+        requireAuth: true,
     },
 ];
