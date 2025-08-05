@@ -12,8 +12,12 @@
   "City": "Город",
   "Username": "Имя пользователя",
   "Avatar": "Аватар",
-    "YourCurrency": "Укажите валюту",
-  "YourCountry": "Укажите страну"
-
+  "YourCurrency": "Укажите валюту",
+  "YourCountry": "Укажите страну",
+    "Incorrect User Data": "Неверные пользовательские данные",
+    "Incorrect Country": "Выберите страну",
+    "Incorrect Age": "Неправильный возраст",
+    "No Data": "Нет данных",
+    "Server Error": "Ошибка сервера при получении данных"
   
 }

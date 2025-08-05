@@ -23,14 +23,14 @@ export const Input = memo((props: InputProps) => {
     const ref = useRef<HTMLInputElement>(null);
     const [active, setActive] = useState(false);
     useEffect(() => {
-        if (value) setActive(true);
+        if (value?.toString()) setActive(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     const onFocus = () => {
         setActive(true);
     };
     const onBlur = () => {
-        if (!value && !ref?.current?.value) {
+        if (!value?.toString() && !ref?.current?.value) {
             setActive(false);
         }
     };

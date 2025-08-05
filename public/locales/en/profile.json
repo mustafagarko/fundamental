@@ -13,6 +13,11 @@
   "Username": "Username",
   "Avatar": "Avatar",
   "YourCurrency": "Your currency",
-  "YourCountry": "Your country"
+  "YourCountry": "Your country",
+    "Incorrect User Data": "Incorrect user data",
+    "Incorrect Country": "Incorrect country data",
+    "Incorrect Age": "Incorrect age",
+    "No Data": "No data",
+    "Server Error": "Server error while fetching data"
   
 }

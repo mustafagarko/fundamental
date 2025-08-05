@@ -31,9 +31,9 @@
     }
   ],
   "profile": {
-    "firstName": "Fedor",
-    "lastName": "Ivanovich",
-    "age": 28,
+    "firstName": "f",
+    "lastName": "    f",
+    "age": 4,
     "currency": "USD",
     "country": "Kazakhstan",
     "city": "Moscow",

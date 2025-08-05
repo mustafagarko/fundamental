@@ -11,7 +11,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
-import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoadingIsLoading';
+import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { loginByUsername } from '../../model/services/loginByUsername.ts/loginByUsername';
 import cls from './LoginForm.module.scss';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
