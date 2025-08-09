@@ -31,8 +31,8 @@
     }
   ],
   "profile": {
-    "firstName": "f",
-    "lastName": "    f",
+    "firstName": "First",
+    "lastName": "Person",
     "age": 4,
     "currency": "USD",
     "country": "Kazakhstan",

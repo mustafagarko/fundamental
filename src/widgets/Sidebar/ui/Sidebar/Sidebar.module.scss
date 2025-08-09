@@ -51,3 +51,15 @@
     flex-direction: column;
     gap: 10px;
 }
+
+.themeSwitch {
+    padding: 0;
+
+    svg {
+        color: var(--primary-color);
+
+        &:hover {
+            color: var(--inverted-color);
+        }
+    }
+}

@@ -2,7 +2,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import 'app/styles/index.scss';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
-import avatar from 'shared/assets/tests/avatarImg.png';
 import { ProfileCard } from './ProfileCard';
 
 export default {
@@ -25,7 +24,7 @@ Primary.args = {
         country: Country.Azerbaijan,
         city: 'Moscow',
         username: 'admin',
-        avatar,
+        avatar: 'https://www.svgrepo.com/show/404545/avatar-man-profile-user-3.svg',
     },
     readonly: true,
 };
@@ -33,7 +32,7 @@ Primary.args = {
 export const Editable = Template.bind({});
 Editable.args = {
     data: {
-        avatar,
+        avatar: 'https://www.svgrepo.com/show/404545/avatar-man-profile-user-3.svg',
     },
     readonly: false,
 };
