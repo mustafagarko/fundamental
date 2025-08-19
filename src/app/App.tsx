@@ -5,25 +5,31 @@ import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
-import { useDispatch } from 'react-redux';
-import { userActions } from 'entities/User';
+import { useDispatch, useSelector } from 'react-redux';
+import { userActions, getUserInited } from 'entities/User';
 
 function App() {
     const { theme } = useTheme();
     const dispatch = useDispatch();
+    const inited = useSelector(getUserInited);
+
     useEffect(() => {
         if (localStorage.getItem(USER_LOCALSTORAGE_KEY)) {
             const userData = localStorage.getItem(USER_LOCALSTORAGE_KEY);
-            if (userData) dispatch(userActions.setUserData(JSON.parse(userData)));
+            if (userData) {
+                dispatch(userActions.setUserData(JSON.parse(userData)));
+            }
         }
+        dispatch(userActions.setInited());
     }, [dispatch]);
+
     return (
         <Suspense fallback="...Loading">
             <div className={classNames('app', {}, [theme])}>
                 <Navbar />
                 <div className="content-page">
                     <Sidebar />
-                    <AppRouter />
+                    {inited && <AppRouter />}
                 </div>
             </div>
         </Suspense>
